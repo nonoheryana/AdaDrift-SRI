@@ -1,0 +1,5 @@
+Algorithm,R² (Overall),R² (Crisis),Crisis Δ,Crisis Rank
+AdaDrift-SRI,0.8958,0.8863,-0.0095,1
+Online-SGD,0.907,0.8844,-0.0226,2
+Static-XGB,0.9631,0.9349,-0.0283,3
+SWRT-XGB,0.8779,0.8392,-0.0387,4

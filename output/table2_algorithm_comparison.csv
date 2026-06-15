@@ -1,0 +1,5 @@
+Algorithm,R² (Overall),RMSE (Overall),MAE (Overall),R² (Crisis),RMSE (Crisis),R² (Non-Crisis),RMSE (Non-Crisis),Δ Crisis Impact,Drifts Detected,Time/obs (ms)
+AdaDrift-SRI,0.8958,0.3295,0.1714,0.8863,0.5671,0.8845,0.2493,-0.0095,9.0,13.358
+Static-XGB,0.9631,0.196,0.0783,0.9349,0.4293,0.9877,0.0815,-0.0283,—,—
+Online-SGD,0.907,0.3113,0.1876,0.8844,0.5719,0.913,0.2163,-0.0226,—,—
+SWRT-XGB,0.8779,0.3567,0.1607,0.8392,0.6744,0.8962,0.2363,-0.0387,—,—
