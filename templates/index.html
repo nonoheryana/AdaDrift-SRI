@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdaDrift-SRI | Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="fas fa-brain"></i> AdaDrift-SRI
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/"><i class="fas fa-home"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/upload"><i class="fas fa-upload"></i> Upload & Train</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/results"><i class="fas fa-chart-bar"></i> Results</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/drift_analysis"><i class="fas fa-wave-square"></i> Drift Analysis</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="container-fluid bg-light py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold text-primary">
+                        AdaDrift-SRI
+                    </h1>
+                    <p class="lead text-muted">
+                        Adaptive Drift-Aware Online Learning Algorithm for Non-Stationary Data Streams
+                    </p>
+                    <p class="mb-4">
+                        <span class="badge bg-success me-2">Real-time</span>
+                    </p>
+                    <div class="d-grid gap-2 d-md-flex">
+                        <a href="/upload" class="btn btn-primary btn-lg px-4 me-md-2">
+                            <i class="fas fa-rocket"></i> Start Training
+                        </a>
+                        <a href="/results" class="btn btn-outline-secondary btn-lg px-4">
+                            <i class="fas fa-chart-line"></i> View Results
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <div class="hero-diagram">
+                        <i class="fas fa-network-wired fa-5x text-primary mb-3"></i>
+                        <div class="row text-center mt-4">
+                            <div class="col-3">
+                                <div class="card bg-primary text-white p-2">
+                                    <small>C1</small>
+                                    <strong>Drift Detector</strong>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="card bg-success text-white p-2">
+                                    <small>C2</small>
+                                    <strong>HATR</strong>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="card bg-info text-white p-2">
+                                    <small>C3</small>
+                                    <strong>SW Eval</strong>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="card bg-warning text-dark p-2">
+                                    <small>C4</small>
+                                    <strong>Restart</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features -->
+    <div class="container py-5">
+        <h2 class="text-center mb-4">Key Features</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 feature-card">
+                    <div class="card-body text-center">
+                        <i class="fas fa-shield-alt fa-3x text-success mb-3"></i>
+                        <h5 class="card-title">Zero Data Leakage</h5>
+                        <p class="card-text">All scalers fitted on warm-up partition only. Strict prequential protocol
+                            ensures no future data contamination.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 feature-card">
+                    <div class="card-body text-center">
+                        <i class="fas fa-bolt fa-3x text-warning mb-3"></i>
+                        <h5 class="card-title">Real-time Processing</h5>
+                        <p class="card-text">O(log N) amortized time complexity. Processes each observation in ~13ms.
+                            Suitable for streaming environments.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 feature-card">
+                    <div class="card-body text-center">
+                        <i class="fas fa-chart-pie fa-3x text-info mb-3"></i>
+                        <h5 class="card-title">Crisis Resilience</h5>
+                        <p class="card-text">Only algorithm that maintains performance during financial crises. COVID-19
+                            case study: error reduced from 3.75 to 0.06.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-1">AdaDrift-SRI © 2026</p>
+            <small>Adaptive Drift-Aware Online Learning for Non-Stationary Data Streams</small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
